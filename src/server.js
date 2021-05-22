@@ -13,8 +13,9 @@ app.get('/repos', async (req, res) => {
       .filter(item => item.language === 'C#')
       .map((item) => {
         const result = {
-          Nome: item.name,
-          Descricao: item.description,
+          Avatar: item.owner.avatar_url,
+          Titulo: item.full_name,
+          Subtitulo: item.description,
           Data_criacao: new Date(item.created_at).toLocaleDateString(),
           Linguagem: item.language
         }
@@ -27,4 +28,5 @@ app.get('/repos', async (req, res) => {
     console.error(error)
   }
 })
+
 app.listen(env.port, console.log('server is running localhost:5050'))

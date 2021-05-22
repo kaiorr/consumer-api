@@ -16,7 +16,7 @@ app.get('/repos', async (req, res) => {
           Avatar: item.owner.avatar_url,
           Titulo: item.full_name,
           Subtitulo: item.description,
-          Data_criacao: new Date(item.created_at).toLocaleDateString(),
+          Data_criacao: new Date(item.created_at).toLocaleDateString('pt-br'),
           Linguagem: item.language
         }
         return result

@@ -1,20 +1,30 @@
-const express = require('express')
-const axios = require('axios')
+import express from 'express'
+import axios from 'axios'
+import env from './config/env'
 
 const app = express()
 app.use(express.json())
 
-app.get('/', async (req, res) => {
+app.get('/repos', async (req, res) => {
 
   try {
-    const {data} = await axios('https://api.github.com/orgs/rocketseat/repos')
-    console.log(data)
+    const {data} = await axios(env.baseUrl, env.headers.cors, env.headers.method)
+    const returnData = data
+      .filter(item => item.language === 'C#')
+      .map((item) => {
+        const result = {
+          Nome: item.name,
+          Descricao: item.description,
+          Data_criacao: new Date(item.created_at).toLocaleDateString(),
+          Linguagem: item.language
+        }
+        return result
+      })
 
-    return res.json(data)
+    return res.json(returnData)
 
   } catch (error) {
     console.error(error)
   }
 })
-
-app.listen('5050', console.log('server is running localhost:5050'))
+app.listen(env.port, console.log('server is running localhost:5050'))

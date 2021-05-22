@@ -1,6 +1,6 @@
-import express from 'express'
-import axios from 'axios'
-import env from './config/env'
+const express = require('express')
+const axios = require('axios')
+const env = require('./config/env')
 
 const app = express()
 app.use(express.json())

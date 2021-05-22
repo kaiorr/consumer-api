@@ -8,7 +8,7 @@ app.use(express.json())
 app.get('/repos', async (req, res) => {
 
   try {
-    const {data} = await axios(env.baseUrl)
+    const {data} = await axios(env.baseUrl, env.headers.cors, env.headers.method)
     const returnData = data
       .filter(item => item.language === 'C#')
       .map((item) => {
@@ -29,4 +29,5 @@ app.get('/repos', async (req, res) => {
   }
 })
 
-app.listen(env.port || 5050, console.log(`server is running ${env.port}`))
+const port = process.env.PORT;
+app.listen(process.env.PORT || 5050, console.log(`server is running ${port}`))

@@ -10,7 +10,7 @@ app.get('/repos', async (req, res) => {
   try {
     const {data} = await axios(env.baseUrl, env.headers.cors, env.headers.method)
     const returnData = data
-      .filter(item => item.language === 'TS')
+      .filter(item => item.language === 'C#')
       .map((item) => {
         const result = {
           avatar: item.owner.avatar_url,
@@ -29,5 +29,5 @@ app.get('/repos', async (req, res) => {
   }
 })
 
-const port = process.env.PORT;
+const port = process.env.PORT
 app.listen(process.env.PORT || 5050, console.log(`server is running ${port}`))

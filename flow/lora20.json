@@ -1,0 +1,3829 @@
+{
+  "onboarding": {
+    "$contentActions": [
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "3bafcdf4-d29e-46c8-aff0-40f00913c772",
+              "type": "text/plain",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": false,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "welcome",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "matches",
+            "values": [
+              ".*"
+            ]
+          }
+        ],
+        "$id": "fc819730-5bf8-409e-ae99-63f0fbacd9b3",
+        "$connId": "con_3",
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "onboarding",
+    "root": true,
+    "$title": "Início",
+    "$position": {
+      "top": "120px",
+      "left": "644px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "fallback": {
+    "$contentActions": [
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "d312e544-3410-47dc-9ef4-cceaba5af9ed",
+              "type": "text/plain"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "error",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "matches",
+            "values": [
+              ".*"
+            ]
+          }
+        ],
+        "$id": "f6fc210a-8edd-4d78-8e45-2f81882a8b4b",
+        "$connId": "con_8",
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "onboarding",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "fallback",
+    "$title": "Exceções",
+    "$position": {
+      "top": "120px",
+      "left": "877px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "welcome": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "ddad11f0-e19b-45ab-af61-4a20a7a92e42",
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000000",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2f25e6d0-f3ca-41e0-a60e-f2b8261eb77c",
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000001",
+            "type": "text/plain",
+            "content": "Olá, espero que esteja tudo bem. Sou a Lora responsável por passar os valores da Take.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000001",
+              "type": "text/plain",
+              "content": "Olá, espero que esteja tudo bem. Sou a Lora responsável por passar os valores da Take."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "8d810b84-b7e6-4869-8fd3-8c55ec3e0386",
+          "type": "SendMessage",
+          "settings": {
+            "id": "aa2bfeed-b438-4be7-b630-400141a04060",
+            "type": "text/plain",
+            "content": "Mesmo eu sendo robô e não tendo consciência sobre o que é valores, posso te ajudar de alguma forma.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "aa2bfeed-b438-4be7-b630-400141a04060",
+              "type": "text/plain",
+              "content": "Mesmo eu sendo robô e não tendo consciência sobre o que é valores, posso te ajudar de alguma forma."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "a631d8c0-9c78-4a33-a4a2-979f211760fd",
+          "type": "SendMessage",
+          "settings": {
+            "id": "60e96003-54b9-4e55-80ca-28678f8d450e",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Vamos lá...",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "Sim  🤩",
+                  "previewText": "Sim  🤩",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "Não  🙁",
+                  "previewText": "Não  🙁",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "60e96003-54b9-4e55-80ca-28678f8d450e",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Vamos lá...",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "Sim  🤩",
+                    "previewText": "Sim  🤩",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "Não  🙁",
+                    "previewText": "Não  🙁",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "aa7479f5-e8c0-49d1-abc9-9e08bdca380b",
+              "type": "text/plain",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_13",
+        "$id": "38257bb5-1c21-4038-8cbb-8283ab18fe75",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "Sim"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "9b6f2794-c62c-41da-a17e-05b3b6953523",
+        "$connId": "con_18",
+        "$id": "9fed9fbe-17ee-4873-ab59-3b2860462970",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "Não"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "Sim  🤩",
+      "Não  🙁"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "welcome",
+    "$title": "Boas vindas",
+    "$position": {
+      "top": "240px",
+      "left": "644px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "error": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "2b5d227e-8ffd-4c0b-86ea-3e3689d660ba",
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000002",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000002",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "9aba0ebc-c022-4b58-97c5-23d3bbcfaf07",
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000003",
+            "type": "text/plain",
+            "content": "Desculpe, não consegui entender!"
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000003",
+              "type": "text/plain",
+              "content": "Desculpe, não consegui entender!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "d0e956f9-6ef6-46f6-b29a-b3d7ffb61581",
+              "type": "text/plain"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "onboarding",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "error",
+    "$title": "Erro padrão",
+    "$position": {
+      "top": "240px",
+      "left": "877px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "c971c790-b6a3-4d3e-9b35-0a24d26c3999": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "50fa7453-491c-4881-bced-4ba17ea9c081",
+          "type": "SendMessage",
+          "settings": {
+            "id": "03604b61-8706-415f-835a-1ce6db1e8193",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "03604b61-8706-415f-835a-1ce6db1e8193",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "58ee5d57-87c0-477d-b6c1-e29df557a293",
+          "type": "SendMessage",
+          "settings": {
+            "id": "ac72bfaf-9972-499a-8d57-0200720a10d2",
+            "type": "text/plain",
+            "content": "A cultura Take tem como base 6 valores que são:",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "ac72bfaf-9972-499a-8d57-0200720a10d2",
+              "type": "text/plain",
+              "content": "A cultura Take tem como base 6 valores que são:"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "84958c9c-2d2a-4c89-b9f8-c33744961eca",
+          "type": "SendMessage",
+          "settings": {
+            "id": "fdf49e3e-a7d1-4f0f-abe5-3427bf8f3f4e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "fdf49e3e-a7d1-4f0f-abe5-3427bf8f3f4e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "9ead20c5-b3cd-4458-abdc-a9761b70fb83",
+          "type": "SendMessage",
+          "settings": {
+            "id": "74b0b29a-503c-4aa7-82cc-8480fe217d60",
+            "type": "application/vnd.lime.collection+json",
+            "content": {
+              "itemType": "application/vnd.lime.document-select+json",
+              "items": [
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Be",
+                      "text": "Pessoas em 1° Lugar",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/sZIxUCL.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": " 💙 Saber mais"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "id": 0,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Team",
+                      "text": "Em nosso time, cada pessoa da o seu melhor",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/ZarjcH5.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "🏳️ Saber mais"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "id": 1,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Execellence",
+                      "text": "Excelente é o nosso ponto de partida",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/teYsOeb.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "⭐️ Saber mais"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "editing": false,
+                  "id": 2
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Charge",
+                      "text": "Apropriar-se para fazer a diferença",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/obwPO49.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "⚡️ Saber mais"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "editing": false,
+                  "id": 3
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Simple",
+                      "text": "Simplicidade é o último grau de sofisticação",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/6Ztrr1E.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "🎯 Saber mais"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "editing": false,
+                  "id": 4
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Higher",
+                      "text": "Pensar grande e ir além",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/5oLwpcs.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "🚀 Saber mais"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "editing": false,
+                  "id": 5
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Desafio",
+                      "text": "Realização do desafio proposto",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/hHd1sSb.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "💡Fazer Desafio"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "editing": false
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "74b0b29a-503c-4aa7-82cc-8480fe217d60",
+              "type": "application/vnd.lime.collection+json",
+              "content": {
+                "itemType": "application/vnd.lime.document-select+json",
+                "items": [
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Be",
+                        "text": "Pessoas em 1° Lugar",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/sZIxUCL.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": " 💙 Saber mais"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "id": 0,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Team",
+                        "text": "Em nosso time, cada pessoa da o seu melhor",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/ZarjcH5.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "🏳️ Saber mais"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "id": 1,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Execellence",
+                        "text": "Excelente é o nosso ponto de partida",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/teYsOeb.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "⭐️ Saber mais"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "editing": false,
+                    "id": 2
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Charge",
+                        "text": "Apropriar-se para fazer a diferença",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/obwPO49.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "⚡️ Saber mais"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "editing": false,
+                    "id": 3
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Simple",
+                        "text": "Simplicidade é o último grau de sofisticação",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/6Ztrr1E.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "🎯 Saber mais"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "editing": false,
+                    "id": 4
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Higher",
+                        "text": "Pensar grande e ir além",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/5oLwpcs.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "🚀 Saber mais"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "editing": false,
+                    "id": 5
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Desafio",
+                        "text": "Realização do desafio proposto",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/hHd1sSb.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "💡Fazer Desafio"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "editing": false
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "a9ab272d-7951-41cc-a55c-2fd24dc4dde6",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "e25af46f-379c-4345-9491-6e5b949b22ed",
+        "$connId": "con_23",
+        "$id": "24927a86-5df8-4e60-a206-e6e33518e3fc",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "43953f15-f9bf-4f08-a878-f18aaf7757ba",
+        "$connId": "con_28",
+        "$id": "2504537a-a492-4e72-856b-5d2a8051ac62",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "🏳️"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "$id": "dbe0b0fa-9abf-4186-9ded-ca7c9c58705a",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "⭐️"
+            ]
+          }
+        ],
+        "$invalid": false,
+        "stateId": "55e910a0-ea16-47a6-a225-3f1170ceedd5",
+        "$connId": "con_33"
+      },
+      {
+        "stateId": "635bc608-4305-4777-bf1b-43b84ff7daaf",
+        "$connId": "con_38",
+        "$id": "d2889050-4ea6-4c9a-bcda-e3c2fcd69ba6",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "⚡️"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "c6790154-fe42-47ba-bf7c-0123f5ffc79c",
+        "$connId": "con_43",
+        "$id": "ebc81110-2f04-4a61-86fb-4a169f4133bb",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "🎯"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "32fa3458-cd08-47d3-aa4d-e80108746e81",
+        "$connId": "con_48",
+        "$id": "82c4d597-1f11-4599-9630-ca915632d39d",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "🚀"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "a3520666-06d4-4039-9779-2138adb03a86",
+        "$connId": "con_53",
+        "$id": "5a5760bc-3d7b-4d73-a351-88136709ea48",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💡"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "First option",
+      "Second option"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+    "root": false,
+    "$title": "Valores",
+    "$position": {
+      "top": "374px",
+      "left": "644px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "9b6f2794-c62c-41da-a17e-05b3b6953523": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8f174f1f-854f-4e1c-be91-2c1d11cedd16",
+          "type": "SendMessage",
+          "settings": {
+            "id": "232665e3-8e49-4d2f-adbf-d8cc6a8c1b3e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "232665e3-8e49-4d2f-adbf-d8cc6a8c1b3e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "18c9792e-0a84-4ac3-95fc-e37bf508b313",
+          "type": "SendMessage",
+          "settings": {
+            "id": "b4c1b392-4d58-4bf5-9338-014cd05a5344",
+            "type": "text/plain",
+            "content": "Volte sempre! Estarei sempre disponível para informar sobre os valores da Take!  😉",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "b4c1b392-4d58-4bf5-9338-014cd05a5344",
+              "type": "text/plain",
+              "content": "Volte sempre! Estarei sempre disponível para informar sobre os valores da Take!  😉"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "7994d4eb-ee20-4862-acfb-838f46618873",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "9b6f2794-c62c-41da-a17e-05b3b6953523",
+    "root": false,
+    "$title": "Volte Sempre",
+    "$position": {
+      "top": "240px",
+      "left": "416px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "e25af46f-379c-4345-9491-6e5b949b22ed": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "A Take é feita por pessoas e para pessoas. Nossas relações são transparentes e humanizadas.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "A Take é feita por pessoas e para pessoas. Nossas relações são transparentes e humanizadas."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "62c520aa-b1fc-43ef-9b1f-4452a27038f2",
+          "type": "SendMessage",
+          "settings": {
+            "id": "68498a1e-9f3f-49de-9a47-dd2c1680f9ac",
+            "type": "text/plain",
+            "content": "Cada Cliente, cada parceiro e cada Take.Ser é valorizado e respeitado em sua individualidade e está presente em cada bit de nossa empresa.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "68498a1e-9f3f-49de-9a47-dd2c1680f9ac",
+              "type": "text/plain",
+              "content": "Cada Cliente, cada parceiro e cada Take.Ser é valorizado e respeitado em sua individualidade e está presente em cada bit de nossa empresa."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "68b5a501-e55c-4747-9b41-1361822eeca6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                },
+                {
+                  "index": -1,
+                  "text": "⭐️ Execellence",
+                  "previewText": "⭐️ Execellence",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "⚡️ Charge",
+                  "previewText": "⚡️ Charge",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🎯 Simple",
+                  "previewText": "🎯 Simple",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🚀 Higher",
+                  "previewText": "🚀 Higher",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "💡 Desafio",
+                  "previewText": "💡 Desafio",
+                  "type": null,
+                  "value": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⭐️ Execellence",
+                    "previewText": "⭐️ Execellence",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⚡️ Charge",
+                    "previewText": "⚡️ Charge",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🎯 Simple",
+                    "previewText": "🎯 Simple",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🚀 Higher",
+                    "previewText": "🚀 Higher",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "💡 Desafio",
+                    "previewText": "💡 Desafio",
+                    "type": null,
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_58",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "💙 Be",
+      "🏳️ Team",
+      "⭐️ Execellence",
+      "⚡️ Charge",
+      "🎯 Simple",
+      "🚀 Higher",
+      "💡 Desafio"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "e25af46f-379c-4345-9491-6e5b949b22ed",
+    "root": false,
+    "$title": "Take.Be",
+    "$position": {
+      "top": "521px",
+      "left": "153px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "43953f15-f9bf-4f08-a878-f18aaf7757ba": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "Sabemos que o que faz uma equipe incrível são pessoas incríveis em cooperação. Assim, cada Take.ser busca cumprir sua parte para garantir a vitória do time.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "Sabemos que o que faz uma equipe incrível são pessoas incríveis em cooperação. Assim, cada Take.ser busca cumprir sua parte para garantir a vitória do time."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "68b5a501-e55c-4747-9b41-1361822eeca6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                },
+                {
+                  "index": -1,
+                  "text": "⭐️ Execellence",
+                  "previewText": "⭐️ Execellence",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "⚡️ Charge",
+                  "previewText": "⚡️ Charge",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🎯 Simple",
+                  "previewText": "🎯 Simple",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🚀 Higher",
+                  "previewText": "🚀 Higher",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "💡 Desafio",
+                  "previewText": "💡 Desafio",
+                  "type": null,
+                  "value": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⭐️ Execellence",
+                    "previewText": "⭐️ Execellence",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⚡️ Charge",
+                    "previewText": "⚡️ Charge",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🎯 Simple",
+                    "previewText": "🎯 Simple",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🚀 Higher",
+                    "previewText": "🚀 Higher",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "💡 Desafio",
+                    "previewText": "💡 Desafio",
+                    "type": null,
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_63",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "💙 Be",
+      "🏳️ Team",
+      "⭐️ Execellence",
+      "⚡️ Charge",
+      "🎯 Simple",
+      "🚀 Higher",
+      "💡 Desafio"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "43953f15-f9bf-4f08-a878-f18aaf7757ba",
+    "root": false,
+    "$title": "Take.Team",
+    "$position": {
+      "top": "520px",
+      "left": "362px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "55e910a0-ea16-47a6-a225-3f1170ceedd5": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "Com nosso espírito geek e nossa disposição para aprender e crescer, buscamos estar sempre um passo a frente e superamos os mais exigentes padrões.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "Com nosso espírito geek e nossa disposição para aprender e crescer, buscamos estar sempre um passo a frente e superamos os mais exigentes padrões."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "68b5a501-e55c-4747-9b41-1361822eeca6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                },
+                {
+                  "index": -1,
+                  "text": "⭐️ Execellence",
+                  "previewText": "⭐️ Execellence",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "⚡️ Charge",
+                  "previewText": "⚡️ Charge",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🎯 Simple",
+                  "previewText": "🎯 Simple",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🚀 Higher",
+                  "previewText": "🚀 Higher",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "💡 Desafio",
+                  "previewText": "💡 Desafio",
+                  "type": null,
+                  "value": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⭐️ Execellence",
+                    "previewText": "⭐️ Execellence",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⚡️ Charge",
+                    "previewText": "⚡️ Charge",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🎯 Simple",
+                    "previewText": "🎯 Simple",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🚀 Higher",
+                    "previewText": "🚀 Higher",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "💡 Desafio",
+                    "previewText": "💡 Desafio",
+                    "type": null,
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_68",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "💙 Be",
+      "🏳️ Team",
+      "⭐️ Execellence",
+      "⚡️ Charge",
+      "🎯 Simple",
+      "🚀 Higher",
+      "💡 Desafio"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "55e910a0-ea16-47a6-a225-3f1170ceedd5",
+    "root": false,
+    "$title": "Take.Execellence",
+    "$position": {
+      "top": "523px",
+      "left": "571px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "635bc608-4305-4777-bf1b-43b84ff7daaf": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "Apostamos em profissionais que chamam a responsabilidade para si e que, sem medo de ousar, transformem o mundo a sua volta, com muita competência e criatividade.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "Apostamos em profissionais que chamam a responsabilidade para si e que, sem medo de ousar, transformem o mundo a sua volta, com muita competência e criatividade."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "68b5a501-e55c-4747-9b41-1361822eeca6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                },
+                {
+                  "index": -1,
+                  "text": "⭐️ Execellence",
+                  "previewText": "⭐️ Execellence",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "⚡️ Charge",
+                  "previewText": "⚡️ Charge",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🎯 Simple",
+                  "previewText": "🎯 Simple",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🚀 Higher",
+                  "previewText": "🚀 Higher",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "💡 Desafio",
+                  "previewText": "💡 Desafio",
+                  "type": null,
+                  "value": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⭐️ Execellence",
+                    "previewText": "⭐️ Execellence",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⚡️ Charge",
+                    "previewText": "⚡️ Charge",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🎯 Simple",
+                    "previewText": "🎯 Simple",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🚀 Higher",
+                    "previewText": "🚀 Higher",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "💡 Desafio",
+                    "previewText": "💡 Desafio",
+                    "type": null,
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_73",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "💙 Be",
+      "🏳️ Team",
+      "⭐️ Execellence",
+      "⚡️ Charge",
+      "🎯 Simple",
+      "🚀 Higher",
+      "💡 Desafio"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "635bc608-4305-4777-bf1b-43b84ff7daaf",
+    "root": false,
+    "$title": "Take.Charge",
+    "$position": {
+      "top": "525px",
+      "left": "776px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "c6790154-fe42-47ba-bf7c-0123f5ffc79c": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "Mantemos o foco no essencial. Menos é mais.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "Mantemos o foco no essencial. Menos é mais."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "68b5a501-e55c-4747-9b41-1361822eeca6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                },
+                {
+                  "index": -1,
+                  "text": "⭐️ Execellence",
+                  "previewText": "⭐️ Execellence",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "⚡️ Charge",
+                  "previewText": "⚡️ Charge",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🎯 Simple",
+                  "previewText": "🎯 Simple",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🚀 Higher",
+                  "previewText": "🚀 Higher",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "💡 Desafio",
+                  "previewText": "💡 Desafio",
+                  "type": null,
+                  "value": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⭐️ Execellence",
+                    "previewText": "⭐️ Execellence",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⚡️ Charge",
+                    "previewText": "⚡️ Charge",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🎯 Simple",
+                    "previewText": "🎯 Simple",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🚀 Higher",
+                    "previewText": "🚀 Higher",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "💡 Desafio",
+                    "previewText": "💡 Desafio",
+                    "type": null,
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_78",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "💙 Be",
+      "🏳️ Team",
+      "⭐️ Execellence",
+      "⚡️ Charge",
+      "🎯 Simple",
+      "🚀 Higher",
+      "💡 Desafio"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "c6790154-fe42-47ba-bf7c-0123f5ffc79c",
+    "root": false,
+    "$title": "Take.Simple",
+    "$position": {
+      "top": "527px",
+      "left": "972px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "32fa3458-cd08-47d3-aa4d-e80108746e81": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "Não temos medo de sonhar grande, pois sabemos que temos talento e determinação para realizar coisas incríveis!",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "Não temos medo de sonhar grande, pois sabemos que temos talento e determinação para realizar coisas incríveis!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "68b5a501-e55c-4747-9b41-1361822eeca6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "c2bf7684-706b-411a-8880-80ce309fdb6e",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                },
+                {
+                  "index": -1,
+                  "text": "⭐️ Execellence",
+                  "previewText": "⭐️ Execellence",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "⚡️ Charge",
+                  "previewText": "⚡️ Charge",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🎯 Simple",
+                  "previewText": "🎯 Simple",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "🚀 Higher",
+                  "previewText": "🚀 Higher",
+                  "type": null,
+                  "value": null
+                },
+                {
+                  "index": -1,
+                  "text": "💡 Desafio",
+                  "previewText": "💡 Desafio",
+                  "type": null,
+                  "value": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⭐️ Execellence",
+                    "previewText": "⭐️ Execellence",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "⚡️ Charge",
+                    "previewText": "⚡️ Charge",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🎯 Simple",
+                    "previewText": "🎯 Simple",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "🚀 Higher",
+                    "previewText": "🚀 Higher",
+                    "type": null,
+                    "value": null
+                  },
+                  {
+                    "index": -1,
+                    "text": "💡 Desafio",
+                    "previewText": "💡 Desafio",
+                    "type": null,
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_83",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "💙 Be",
+      "🏳️ Team",
+      "⭐️ Execellence",
+      "⚡️ Charge",
+      "🎯 Simple",
+      "🚀 Higher",
+      "💡 Desafio"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "32fa3458-cd08-47d3-aa4d-e80108746e81",
+    "root": false,
+    "$title": "Take.Higher",
+    "$position": {
+      "top": "529px",
+      "left": "1174px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "a3520666-06d4-4039-9779-2138adb03a86": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "8db1d5e7-9829-422b-932e-2725c3fbf3df",
+          "type": "SendMessage",
+          "settings": {
+            "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "7c5203ed-ffa8-4278-b6a8-be1d9e040668",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3479f2ab-8e40-46f6-8dea-9326457ab60e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+            "type": "text/plain",
+            "content": "Conforme solicitado no email enviado, o resultado do desafio está disponível abaixo...",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd9a235a-7e5b-4ed3-b0c8-3435ff93e304",
+              "type": "text/plain",
+              "content": "Conforme solicitado no email enviado, o resultado do desafio está disponível abaixo..."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "625e085a-bd71-4b2f-9741-9fff779b1de6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "d1443960-0238-4cef-8547-7c18aac51bad",
+            "type": "application/vnd.lime.collection+json",
+            "content": {
+              "itemType": "application/vnd.lime.document-select+json",
+              "items": [
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response@repositorio_0.full_name}}",
+                      "text": "{{response@repositorio_0.description}}",
+                      "type": "image/jpeg",
+                      "uri": "{{response@repositorio_0.avatar}}",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "id": 0,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response@repositorio_1.full_name}}",
+                      "text": "{{response@repositorio_1.description}}",
+                      "type": "image/jpeg",
+                      "uri": "{{response@repositorio_1.avatar}}",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "First option"
+                      },
+                      "value": null
+                    },
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "Second option"
+                      },
+                      "value": null
+                    }
+                  ],
+                  "id": 1,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response@repositorio_3.full_name}}",
+                      "text": "{{response@repositorio_3.description}}",
+                      "type": "image/jpeg",
+                      "uri": "{{response@repositorio_3.avatar}}",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "editing": false,
+                  "id": 2
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response@repositorio_4.full_name}}",
+                      "text": "{{response@repositorio_4.description}}",
+                      "type": "image/jpeg",
+                      "uri": "{{response@repositorio_4.avatar}}",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "editing": false,
+                  "id": 3
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response@repositorio_5.full_name}}",
+                      "text": "{{response@repositorio_5.description}}",
+                      "type": "image/jpeg",
+                      "uri": "{{response@repositorio_5.avatar}}",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "editing": false
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "d1443960-0238-4cef-8547-7c18aac51bad",
+              "type": "application/vnd.lime.collection+json",
+              "content": {
+                "itemType": "application/vnd.lime.document-select+json",
+                "items": [
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response@repositorio_0.full_name}}",
+                        "text": "{{response@repositorio_0.description}}",
+                        "type": "image/jpeg",
+                        "uri": "{{response@repositorio_0.avatar}}",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "id": 0,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response@repositorio_1.full_name}}",
+                        "text": "{{response@repositorio_1.description}}",
+                        "type": "image/jpeg",
+                        "uri": "{{response@repositorio_1.avatar}}",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "First option"
+                        },
+                        "value": null
+                      },
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "Second option"
+                        },
+                        "value": null
+                      }
+                    ],
+                    "id": 1,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response@repositorio_3.full_name}}",
+                        "text": "{{response@repositorio_3.description}}",
+                        "type": "image/jpeg",
+                        "uri": "{{response@repositorio_3.avatar}}",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "editing": false,
+                    "id": 2
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response@repositorio_4.full_name}}",
+                        "text": "{{response@repositorio_4.description}}",
+                        "type": "image/jpeg",
+                        "uri": "{{response@repositorio_4.avatar}}",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "editing": false,
+                    "id": 3
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response@repositorio_5.full_name}}",
+                        "text": "{{response@repositorio_5.description}}",
+                        "type": "image/jpeg",
+                        "uri": "{{response@repositorio_5.avatar}}",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "editing": false
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "0c7c5e56-e13f-4d00-8cdb-3ad28eb342b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "88500f9a-9854-4138-9881-8ea4346eb15f",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "88500f9a-9854-4138-9881-8ea4346eb15f",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "2b397ecb-64b5-4e1f-8c20-d23af7b240b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Para continuar sempre evoluindo é necessário a realização do feedback",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "🥳 Gostei",
+                  "previewText": "🥳 Gostei",
+                  "value": null,
+                  "index": 0,
+                  "type": null
+                },
+                {
+                  "text": "🤗 Pode melhorar",
+                  "previewText": "🤗 Pode melhorar",
+                  "value": null,
+                  "index": 1,
+                  "type": null
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "25ee5b6f-678c-4b82-a39c-a48cdb4bec52",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Para continuar sempre evoluindo é necessário a realização do feedback",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "🥳 Gostei",
+                    "previewText": "🥳 Gostei",
+                    "value": null,
+                    "index": 0,
+                    "type": null
+                  },
+                  {
+                    "text": "🤗 Pode melhorar",
+                    "previewText": "🤗 Pode melhorar",
+                    "value": null,
+                    "index": 1,
+                    "type": null
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "c971c790-b6a3-4d3e-9b35-0a24d26c3999",
+        "$connId": "con_88",
+        "$id": "1f1dfed4-13c4-484c-8a1a-2dcd898ad714",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "💙 Be",
+              "🏳️ Team",
+              "⭐️ Execellence",
+              "⚡️ Charge",
+              "🎯 Simple",
+              "🚀 Higher",
+              "💡 Desafio"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "e223331b-770b-4dfe-97c8-b199f0254024",
+        "$connId": "con_93",
+        "$id": "2455ae40-f669-499e-ab2c-99dc5c475321",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "🥳"
+            ]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "f0a77dcf-a143-4f86-b62b-1ad87a0edc11",
+        "$connId": "con_98",
+        "$id": "6691dba2-8103-468f-a0c6-bb48c31f8622",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "contains",
+            "values": [
+              "🤗"
+            ]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [
+      {
+        "$id": "d317183a-3d2b-4c7f-8ebc-1eae110b7579",
+        "type": "ProcessHttp",
+        "$title": "Requisição HTTP",
+        "$invalid": false,
+        "settings": {
+          "headers": {},
+          "method": "GET",
+          "uri": "http://kaiorr-consumer-api.herokuapp.com/repos",
+          "responseStatusVariable": "status",
+          "responseBodyVariable": "response"
+        },
+        "conditions": []
+      }
+    ],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "First option",
+      "Second option",
+      "🥳 Gostei",
+      "🤗 Pode melhorar"
+    ],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "a3520666-06d4-4039-9779-2138adb03a86",
+    "root": false,
+    "$title": "Desafio",
+    "$position": {
+      "top": "530px",
+      "left": "1359px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "e223331b-770b-4dfe-97c8-b199f0254024": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "1f9287fb-a6fd-4164-bbdb-029fd48f548a",
+          "type": "SendMessage",
+          "settings": {
+            "id": "264a47c6-d8fb-4547-8f99-b7bdcc49d519",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "264a47c6-d8fb-4547-8f99-b7bdcc49d519",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "a2f1f242-0f76-43e5-9f24-32ba42e7be5c",
+          "type": "SendMessage",
+          "settings": {
+            "id": "679371d2-7da4-4bb9-ae6b-d92f57a6935b",
+            "type": "application/vnd.lime.media-link+json",
+            "content": {
+              "title": "",
+              "text": "",
+              "type": "image/gif",
+              "uri": "https://i.imgur.com/sG1AeaN.gif",
+              "aspectRatio": "2:1"
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "679371d2-7da4-4bb9-ae6b-d92f57a6935b",
+              "type": "application/vnd.lime.media-link+json",
+              "content": {
+                "title": "",
+                "text": "",
+                "type": "image/gif",
+                "uri": "https://i.imgur.com/sG1AeaN.gif",
+                "aspectRatio": "2:1"
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "e90820f0-3846-45a4-ba7f-3b11c45e40ec",
+          "type": "SendMessage",
+          "settings": {
+            "id": "9fb236ed-bb0a-4a04-8922-4cb5eedd69e9",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "9fb236ed-bb0a-4a04-8922-4cb5eedd69e9",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "6ec23167-112b-4a5e-8b48-041dde752c7b",
+          "type": "SendMessage",
+          "settings": {
+            "id": "0a2a142e-4e5f-4334-bd28-7396108c755a",
+            "type": "text/plain",
+            "content": "WOOW!!! Que bom que gostou. Estou em constante evolução justamente por isso. Abaixo vou deixar meu linkedin, me add lá fortelecer o network. Vlw!",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "0a2a142e-4e5f-4334-bd28-7396108c755a",
+              "type": "text/plain",
+              "content": "WOOW!!! Que bom que gostou. Estou em constante evolução justamente por isso. Abaixo vou deixar meu linkedin, me add lá fortelecer o network. Vlw!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "d70239b5-44bf-4625-b617-86bf6c8f7b53",
+          "type": "SendMessage",
+          "settings": {
+            "id": "48c5cb35-5248-4740-94e8-a21537b9f693",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "48c5cb35-5248-4740-94e8-a21537b9f693",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "e007a4d5-5b54-4d45-b3d5-461689280944",
+          "type": "SendMessage",
+          "settings": {
+            "id": "60e257f6-10e5-493b-90ad-4b42d583e262",
+            "type": "text/plain",
+            "content": "Todo e qualquer feedback é bem vindo então, caso encontre pontos de melhoria por favor me acione para informa-los. \n\nLinkedin: https://www.linkedin.com/in/kaiorr/\n\nGithub: https://github.com/kaiorr",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "60e257f6-10e5-493b-90ad-4b42d583e262",
+              "type": "text/plain",
+              "content": "Todo e qualquer feedback é bem vindo então, caso encontre pontos de melhoria por favor me acione para informa-los. \n\nLinkedin: https://www.linkedin.com/in/kaiorr/\n\nGithub: https://github.com/kaiorr"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "52e5a088-0c8c-4808-b984-4a64fd8d6569",
+          "type": "SendMessage",
+          "settings": {
+            "id": "68a9b99d-e683-44f7-af28-e953c9775ab7",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "68a9b99d-e683-44f7-af28-e953c9775ab7",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "9e904628-2fce-4413-bad8-de9b3f21c689",
+          "type": "SendMessage",
+          "settings": {
+            "id": "dc0f08f1-7b71-4060-ab76-35f857190e36",
+            "type": "text/plain",
+            "content": "Muito obrigado por sua avaliaçao. Agora deixa eu correr ali e aprender um pouco mais. Vlw 🤓",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "dc0f08f1-7b71-4060-ab76-35f857190e36",
+              "type": "text/plain",
+              "content": "Muito obrigado por sua avaliaçao. Agora deixa eu correr ali e aprender um pouco mais. Vlw 🤓"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [
+      {
+        "$id": "d317183a-3d2b-4c7f-8ebc-1eae110b7579",
+        "type": "ProcessHttp",
+        "$title": "Requisição HTTP",
+        "$invalid": false,
+        "settings": {
+          "headers": {},
+          "method": "GET",
+          "uri": "http://kaiorr-consumer-api.herokuapp.com/repos",
+          "responseStatusVariable": "status",
+          "responseBodyVariable": "response"
+        },
+        "conditions": []
+      }
+    ],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "e223331b-770b-4dfe-97c8-b199f0254024",
+    "root": false,
+    "$title": "Feedback.Positivo",
+    "$position": {
+      "top": "382px",
+      "left": "1280px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "f0a77dcf-a143-4f86-b62b-1ad87a0edc11": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "1f9287fb-a6fd-4164-bbdb-029fd48f548a",
+          "type": "SendMessage",
+          "settings": {
+            "id": "264a47c6-d8fb-4547-8f99-b7bdcc49d519",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "264a47c6-d8fb-4547-8f99-b7bdcc49d519",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "a2f1f242-0f76-43e5-9f24-32ba42e7be5c",
+          "type": "SendMessage",
+          "settings": {
+            "id": "679371d2-7da4-4bb9-ae6b-d92f57a6935b",
+            "type": "application/vnd.lime.media-link+json",
+            "content": {
+              "title": "",
+              "text": "",
+              "type": "image/png",
+              "uri": "https://i.imgur.com/MfRSkC6.png",
+              "aspectRatio": "2:1"
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "679371d2-7da4-4bb9-ae6b-d92f57a6935b",
+              "type": "application/vnd.lime.media-link+json",
+              "content": {
+                "title": "",
+                "text": "",
+                "type": "image/png",
+                "uri": "https://i.imgur.com/MfRSkC6.png",
+                "aspectRatio": "2:1"
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "e90820f0-3846-45a4-ba7f-3b11c45e40ec",
+          "type": "SendMessage",
+          "settings": {
+            "id": "9fb236ed-bb0a-4a04-8922-4cb5eedd69e9",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "9fb236ed-bb0a-4a04-8922-4cb5eedd69e9",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "6ec23167-112b-4a5e-8b48-041dde752c7b",
+          "type": "SendMessage",
+          "settings": {
+            "id": "0a2a142e-4e5f-4334-bd28-7396108c755a",
+            "type": "text/plain",
+            "content": "Estou em constante evolução justamente por isso. Abaixo vou deixar meu linkedin, me add lá e vamos fortelecer o network. Vlw!",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "0a2a142e-4e5f-4334-bd28-7396108c755a",
+              "type": "text/plain",
+              "content": "Estou em constante evolução justamente por isso. Abaixo vou deixar meu linkedin, me add lá e vamos fortelecer o network. Vlw!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "d70239b5-44bf-4625-b617-86bf6c8f7b53",
+          "type": "SendMessage",
+          "settings": {
+            "id": "48c5cb35-5248-4740-94e8-a21537b9f693",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "48c5cb35-5248-4740-94e8-a21537b9f693",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "e007a4d5-5b54-4d45-b3d5-461689280944",
+          "type": "SendMessage",
+          "settings": {
+            "id": "60e257f6-10e5-493b-90ad-4b42d583e262",
+            "type": "text/plain",
+            "content": "Todo e qualquer feedback é bem vindo então, caso encontre pontos de melhoria por favor me acione para informa-los. \n\nLinkedin: https://www.linkedin.com/in/kaiorr/\n\nGithub: https://github.com/kaiorr",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "60e257f6-10e5-493b-90ad-4b42d583e262",
+              "type": "text/plain",
+              "content": "Todo e qualquer feedback é bem vindo então, caso encontre pontos de melhoria por favor me acione para informa-los. \n\nLinkedin: https://www.linkedin.com/in/kaiorr/\n\nGithub: https://github.com/kaiorr"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "bb1407f3-0f4d-44db-9261-bbad664d4488",
+          "type": "SendMessage",
+          "settings": {
+            "id": "ff835914-9fff-49b4-8409-02c00654a3a1",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "ff835914-9fff-49b4-8409-02c00654a3a1",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "22ba5203-1cf6-4724-9465-deb4c34771ae",
+          "type": "SendMessage",
+          "settings": {
+            "id": "5761be26-9fbb-4540-bfbc-240caf8ba0e3",
+            "type": "text/plain",
+            "content": "Muito obrigado por sua avaliaçao. Agora deixa eu correr ali e aprender um pouco mais. Vlw 🤓",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "5761be26-9fbb-4540-bfbc-240caf8ba0e3",
+              "type": "text/plain",
+              "content": "Muito obrigado por sua avaliaçao. Agora deixa eu correr ali e aprender um pouco mais. Vlw 🤓"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "c2913f55-ef9f-487d-a628-5d6374a56cf8",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [
+      {
+        "$id": "d317183a-3d2b-4c7f-8ebc-1eae110b7579",
+        "type": "ProcessHttp",
+        "$title": "Requisição HTTP",
+        "$invalid": false,
+        "settings": {
+          "headers": {},
+          "method": "GET",
+          "uri": "http://kaiorr-consumer-api.herokuapp.com/repos",
+          "responseStatusVariable": "status",
+          "responseBodyVariable": "response"
+        },
+        "conditions": []
+      }
+    ],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "f0a77dcf-a143-4f86-b62b-1ad87a0edc11",
+    "root": false,
+    "$title": "Feedback.Melhoria",
+    "$position": {
+      "top": "384px",
+      "left": "1481px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  }
+}

@@ -10,14 +10,14 @@ app.get('/repos', async (req, res) => {
   try {
     const {data} = await axios(env.baseUrl, env.headers.cors, env.headers.method)
     const returnData = data
-      .filter(item => item.language === 'C#')
+      .filter(item => item.language === 'TS')
       .map((item) => {
         const result = {
-          Avatar: item.owner.avatar_url,
-          Titulo: item.full_name,
-          Subtitulo: item.description,
-          Data_criacao: new Date(item.created_at).toLocaleDateString('pt-br'),
-          Linguagem: item.language
+          avatar: item.owner.avatar_url,
+          name: item.full_name,
+          description: item.description,
+          date: new Date(item.created_at).toLocaleDateString('pt-br'),
+          language: item.language
         }
         return result
       })

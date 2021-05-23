@@ -9,23 +9,24 @@ app.get('/repos', async (req, res) => {
 
   try {
     const {data} = await axios(env.baseUrl, env.headers.cors, env.headers.method)
-    const returnData = data
-      .filter(item => item.language === 'C#')
-      .map((item) => {
-        const result = {
+    const result = {}
+
+    data.forEach((item, index) => {
+      if (item.language === 'C#') {
+        result[`repositorio_${index}`] = {
           avatar: item.owner.avatar_url,
-          name: item.full_name,
+          full_name: item.name,
           description: item.description,
-          date: new Date(item.created_at).toLocaleDateString('pt-br'),
+          created_at: new Date(item.created_at).toLocaleDateString('pt-br'),
           language: item.language
         }
-        return result
-      })
+      }
+    })
 
-    return res.json(returnData)
+    return res.json(result)
 
   } catch (error) {
-    console.error(error)
+    res.status(404).json({message: 'Erro nos dados de requisição, favor confirmar a url acessada!!!'})
   }
 })
 
